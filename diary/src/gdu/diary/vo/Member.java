@@ -1,5 +1,5 @@
 package gdu.diary.vo;
-
+ 
 public class Member {
 	private int memberNo;
 	private String memberId;
