@@ -11,7 +11,7 @@
 	<!-- 로그인 전 -->
 	<c:if test="${sessionMember == null }">
 		<h1>login</h1>
-		<form method="post" action="${pageContext.request.contextPath}/login">
+	<form method="post" action="${pageContext.request.contextPath}/login">
 			<div>
 				<div>ID : </div>
 				<div><input type="text" name="memberId"value="goodee@gdu.co.kr"></div>
@@ -25,8 +25,13 @@
 	<!-- 로그인 후 -->
 	<c:if test="${sessionMember != null }">
 		<div>${sessionMember.memberId}님 반갑습니다.</div>
-		<div><a href="${pageContext.request.contextPath}/auth/logout">로그아웃</a></div>
-		<div><a href="/auth/">다이어리</a></div>
+		<div>
+			<a href="${pageContext.request.contextPath}/auth/logout">로그아웃</a>
+			<a href="${pageContext.request.contextPath}/auth/modifyMember">정보수정</a>
+			<!--  -->
+			<a href="${pageContext.request.contextPath}/auth/removeMember">탈퇴</a>
+		</div>
+		<div><a href="/auth/diary">다이어리</a></div>
 	</c:if>
 </body>
-</html>
+</html>	
