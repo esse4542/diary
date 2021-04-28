@@ -34,7 +34,7 @@ public class DiaryController extends HttpServlet {
 		Map<String, Object> diaryMap = this.diaryService.getDiary(memberNo, targetYear, targetMonth);	
 		
 		request.setAttribute("diaryMap", diaryMap);
-		request.getRequestDispatcher("/WEB-INF/view/diary.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/auth/diary.jsp").forward(request, response);
 		// view diary.jsp
 		
 	}
